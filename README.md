@@ -16,7 +16,7 @@ We have developed this game since early 2016 and it still isn't completely finis
 
 Of course, you can also upload the game to your web server to share it with others.
 
-## Why some source code was compressed?
+## Why some source code was encrypted?
 
 In order to protect our rights and interests, it's obvious that we couldn't publish all the source code of *PvZ Travel* under present conditions. However, we sincerely hope that this open source version can help you learn more about *PvZ Travel*.
 
