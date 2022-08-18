@@ -1,0 +1,271 @@
+/*! 
+ * Copyright 2022 JiangNanGame. All rights reserved.
+ * Use of this source code is governed by The-Changjiang-River-License. 
+ * The link of our license: https://github.com/jiangnangame/The-Changjiang-River-License/
+ */
+ #dSurface{ background-image: url(./uis/main.webp);}
+#tiaoye{background: url(./uis/map.webp) no-repeat;background-size:130px 134px;}
+#FuBen .biaoti, #jijie, #jijie2, #jishu, #jishu2, #meng, #wanjia {
+    background-image:url(./uis/Fuben1.webp);
+}
+#jishu2, #meng2, #wanjia2{
+    background-image:url(data:image/png;base64,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) !important;
+}
+#rules{
+    background-image:url(./uis/Introduction.webp);
+}
+@font-face{font-family:LVL_SPECIALENGLISHFONT_22;src:url(en.ttf) format('truetype')}
+.LvlUI_Industry20Div{
+    font-family:LVL_SPECIALENGLISHFONT_22
+}
+/*Tips for yellow characters on black background in the game*/
+#Zimu{
+    font-size: 35px;
+    -webkit-text-stroke: 0.6px #000;
+}
+
+/*The Map Background*/
+#WorldMap{
+    background:url(./uis/WorldMap.webp) no-repeat;
+}
+
+#dNewProp{
+    background:url(./uis/NewProp.webp) no-repeat;
+}
+
+#dShop{
+    background:url(./uis/store.webp) no-repeat;
+}
+
+#Notice{
+    background:url(./uis/Notice.webp) 0 0;
+}
+
+#Notice .Enter{
+    background:url(./uis/Notice.webp) -266px -602px;
+}
+
+/*The name of the new plant, in the customs clearance screen*/
+#dNewPlant{background:url(./uis/GetNewPlantPanelEnglish.webp);}
+#dNewPlantName{
+    top:405px;
+    -webkit-text-stroke: 2px black;
+    font-size: 40px;
+}
+/*bottom-left corner tip (new plant)*/
+#dNewPlantTooltip{
+    font-weight: 500;
+}
+#dNewPlantSunNum{
+    left:74%;
+    top:60px;
+}
+#dNewPlantcoolTime{
+    left:670px;
+    top:117px;
+}
+/*right story (new plant)*/
+#dNewPlantStory{
+    font-weight: 500;
+}
+/*The name of the new props (like star), in the customs clearance screen*/
+#dNewPropName{
+    font-weight: bold;
+    -webkit-text-stroke: 1px black;
+}
+/*Tip under it*/
+#dNewPropTooltip{
+    font-weight: normal;
+    -webkit-text-stroke: 0.5px black;
+}
+/*Level Name In Selection Menu(The big yellow one)*/
+#LvlInfoUI #guankaming{
+    -webkit-text-stroke: 1px black;
+    text-shadow: 1px 1px 1px #000;
+    font-weight: 800;
+    font-size: 28px;
+    height: 34px;
+}
+/*Informations In Selection Menu*/
+#LvlInfoUI #textIn{
+    -webkit-text-stroke: 1px black;
+    text-shadow: 1px 1px 1px #000;
+    font-weight: 800;
+    font-size: 25px;
+}
+/*Restart and Quit buttons in Pause Menu*/
+#Menu .button{
+    -webkit-text-stroke: 1.2px black;
+    text-shadow: 1px 1.5px 1.5px #000;
+    letter-spacing:2px;
+    font-size: 35px;
+}
+/*Auto Collect Sun And Mute checkbox in Pause Menu*/
+#Menu .OMd0 .OMd1{
+    -webkit-text-stroke: 0.8px black;
+    font-size: 17px;
+}
+/*Fast Setting*/
+#kuaisushezhi .OMd1{
+    font-size:20px;
+    -webkit-text-stroke: 0.4px black;
+}
+/*Names of Activites In Notice Menu*/
+#Notice .ActName{ 
+    font-weight: 1000; 
+    font-size: 36px; 
+    -webkit-text-stroke: 1.5px black; 
+}
+/*Dates of Activites In Notice Menu*/
+#Notice .ActDate{ 
+    font-weight: 1000; 
+    font-size: 20px; 
+    text-shadow: 1px 1px 0.7px #000;
+    -webkit-text-stroke: 1px black; 
+}
+/*Number of Levels In Notice Menu*/
+#Notice .ActNumber{ 
+    font-weight: 1000; 
+    font-size: 20px; 
+    text-shadow: 1px 1px 0.7px #000;
+    -webkit-text-stroke: 1px black; 
+}
+/*Score Text in game*/
+#dGameScore{ 
+    text-shadow: 1px 1.5px 1.5px #000;
+    -webkit-text-stroke: 0.6px black; 
+}
+/*Level Name in game*/
+#sFlagMeterTitleF{
+    text-shadow: 1px 1.5px 1.5px #000;
+    -webkit-text-stroke: 0.6px black; 
+    top: 33px;
+}
+/*Sunbank counter*/
+#sSunNum{
+    top: 17px;
+    font-size: 18pt;
+}
+/*Alert Box*/
+#jngAlert #text{
+    font-weight:bold;
+    font-size: 17px;
+    text-shadow: 1px 1px 1px #000;
+    -webkit-text-stroke: 0.3px black; 
+    letter-spacing:1.5px;
+}
+/*Props In Selection Map (like Erlenmeyer flask)*/
+#dCueName{
+    font-size:21px;
+    top:2px;
+}
+/*Text on buttons*/
+.oneLineVoidButton {
+    font-size: 27px !important;
+    text-align: center;
+    text-shadow: rgb(0 0 0) 2px 0px 0px, rgb(0 0 0) 1.75517px 0.958851px 0px, rgb(0 0 0) 1.0806px 1.68294px 0px, rgb(0 0 0) 0.141474px 1.99499px 0px, rgb(0 0 0) -0.832294px 1.81859px 0px, rgb(0 0 0) -1.60229px 1.19694px 0px, rgb(0 0 0) -1.97998px 0.28224px 0px, rgb(0 0 0) -1.87291px -0.701566px 0px, rgb(0 0 0) -1.30729px -1.5136px 0px, rgb(0 0 0) -0.421592px -1.95506px 0px, rgb(0 0 0) 0.567324px -1.91785px 0px, rgb(0 0 0) 1.41734px -1.41108px 0px, rgb(0 0 0) 1.92034px -0.558831px 0px, -2px 2px 3px black;
+}
+/*Let's Rock!*/
+#dAll #startFightButton {
+    font-size: 27px !important;
+    text-align: center;
+    text-shadow: rgb(0 0 0) 2px 0px 0px, rgb(0 0 0) 1.75517px 0.958851px 0px, rgb(0 0 0) 1.0806px 1.68294px 0px, rgb(0 0 0) 0.141474px 1.99499px 0px, rgb(0 0 0) -0.832294px 1.81859px 0px, rgb(0 0 0) -1.60229px 1.19694px 0px, rgb(0 0 0) -1.97998px 0.28224px 0px, rgb(0 0 0) -1.87291px -0.701566px 0px, rgb(0 0 0) -1.30729px -1.5136px 0px, rgb(0 0 0) -0.421592px -1.95506px 0px, rgb(0 0 0) 0.567324px -1.91785px 0px, rgb(0 0 0) 1.41734px -1.41108px 0px, rgb(0 0 0) 1.92034px -0.558831px 0px, -2px 2px 3px black;
+}
+    
+/*Buttons*/
+/*.Start{
+    background-image:url(./uis/Buttons/Start.webp) !important;
+}*/
+/* 按钮-确定 */
+/*.OK{ background-image:url(./uis/Buttons/OK.webp) !important;}
+*//* 按钮-取消 */
+/*.Cancel{background-image:url(./uis/Buttons/Cancel.webp) !important;}
+*//* 按钮-继续游戏 */
+/*.Continue{ background-image:url(./uis/Buttons/Continue.webp) !important;}
+*/.Start,.OK,.Cancel,.Continue{
+    background-size:112px 46px !important;
+}
+/*#dMenu #dMenu0 {
+    background-image:url(./uis/Buttons/Speed.webp);
+    background-size:112px 46px;
+}
+#dMenu #dMenu1{
+    background-image:url(./uis/Buttons/Menu.webp);
+    background-size:112px 46px;
+}
+#LvlInfoUI #jx {
+    background-image:url(./uis/Buttons/Mirror.webp);
+    background-size:112px 46px;
+}
+#dSelectCard #button1 {
+    background-image:url(./uis/Buttons/Reset.webp);
+    background-size:112px 46px;
+}*/
+/*last stand*/
+#dAll #startFightButton{
+    /*font-szie balaba*/
+}
+#startGame{
+    background:url(./uis/Game_Start.webp);
+    background-size:204px 71px;
+    transition:filter 300ms ease-out;
+}
+
+/*Information*/
+#Almanac .Book,#Almanac #aTitle{
+    background-image:url(./uis/Almanac.webp);
+}
+/*Panel*/
+#dSelectCard, #jngAlert, #dProcess, #LvlInfoUI, #Menu, #kuaisushezhi, #dCue{
+    background-image:url(./uis/panel.webp);
+}
+#GameOver{
+    background-image:url(./uis/GameOver.png);
+}
+/*Almanac*/
+.Almanac_Name{
+    font-size:27.4px;
+}
+.cardSunNum{
+    text-align: right;
+    width: 100%;
+    height: 20px;
+    bottom: 5px;
+    right: 8px;
+    color:white;
+    -webkit-text-stroke: black 1px;
+    text-shadow: -0.5px 0.5px 3px black;
+    position: absolute;
+    font-size: 20px;
+}
+.cardSunNum2{
+    text-align: right;
+    width: 100%;
+    height: 28px;
+    bottom: 7px;
+    right: 11px;
+    -webkit-text-stroke: black 1px;
+    text-shadow: -0.5px 0.5px 3px black;
+    color:white;
+    position: absolute;
+    font-size: 28px;
+}
+/*New Buttons*/
+.voidButton{
+    font-size: 27px !important;
+    text-align: center;
+    text-shadow: rgb(0 0 0) 2px 0px 0px, rgb(0 0 0) 1.75517px 0.958851px 0px, rgb(0 0 0) 1.0806px 1.68294px 0px, rgb(0 0 0) 0.141474px 1.99499px 0px, rgb(0 0 0) -0.832294px 1.81859px 0px, rgb(0 0 0) -1.60229px 1.19694px 0px, rgb(0 0 0) -1.97998px 0.28224px 0px, rgb(0 0 0) -1.87291px -0.701566px 0px, rgb(0 0 0) -1.30729px -1.5136px 0px, rgb(0 0 0) -0.421592px -1.95506px 0px, rgb(0 0 0) 0.567324px -1.91785px 0px, rgb(0 0 0) 1.41734px -1.41108px 0px, rgb(0 0 0) 1.92034px -0.558831px 0px, -2px 2px 3px black;
+}
+#DivTeach::before{
+    content: "(CLICK TO CONTINUE)";
+    color:#8A8A8A;
+    position: absolute;
+    left: -25.5px;
+    top: 126px;
+    font-size: 22px;
+    font-weight: normal;
+    width: 556px;
+    height: 30px;
+    text-align: center;
+    z-index: -1;
+}

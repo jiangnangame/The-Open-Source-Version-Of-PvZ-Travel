@@ -1,0 +1,909 @@
+/*! 
+ * Copyright 2022 JiangNanGame. All rights reserved.
+ * Use of this source code is governed by The-Changjiang-River-License. 
+ * The link of our license: https://github.com/jiangnangame/The-Changjiang-River-License/
+ */
+ ﻿/* 
+ * 这个文件专门用来写游戏UI&场景界面的配置！
+ * 首屏渲染的时候此文件应当引入
+ */
+
+/*设置默认的文字描边顺序是在填色之下，避免描边覆盖填色位置*/
+*{
+    paint-order:stroke fill;
+} 
+/* 场景界面 */
+/* 战斗场景移动容器（修复115pxBug） */
+#dFightingScene{ 
+    left: 115px; 
+    position: absolute; 
+    width: 1285px; 
+    height: 600px; 
+}
+/* 通用按钮配置 */
+.jngButton{ 
+    cursor:pointer;
+    border:0;
+}
+/*空按钮*/
+.voidButton{
+    background-color: transparent;
+    background-image: url(../images/interface/voidButton.png);
+    background-size: 112px 44.5px;
+    background-repeat: no-repeat;
+    background-position: 0px 0.5px;
+    line-height: 46.5px;
+    position: relative;
+    padding: 0px;
+    height: 46px;
+    width: 112px;
+    cursor: pointer;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    text-shadow: rgb(0 0 0) 2px 0px 0px, rgb(0 0 0) 1.75517px 0.958851px 0px, rgb(0 0 0) 1.0806px 1.68294px 0px, rgb(0 0 0) 0.141474px 1.99499px 0px, rgb(0 0 0) -0.832294px 1.81859px 0px, rgb(0 0 0) -1.60229px 1.19694px 0px, rgb(0 0 0) -1.97998px 0.28224px 0px, rgb(0 0 0) -1.87291px -0.701566px 0px, rgb(0 0 0) -1.30729px -1.5136px 0px, rgb(0 0 0) -0.421592px -1.95506px 0px, rgb(0 0 0) 0.567324px -1.91785px 0px, rgb(0 0 0) 1.41734px -1.41108px 0px, rgb(0 0 0) 1.92034px -0.558831px 0px, -2px 2px 3px black;
+}
+/*默认的只有一行的空按钮*/
+.oneLineVoidButton{
+    font-size: 22px;
+    text-align: center;
+    /*line-height: 43px;*/
+    color:white;
+    text-shadow: rgb(0 0 0) 2px 0px 0px, rgb(0 0 0) 1.75517px 0.958851px 0px, rgb(0 0 0) 1.0806px 1.68294px 0px, rgb(0 0 0) 0.141474px 1.99499px 0px, rgb(0 0 0) -0.832294px 1.81859px 0px, rgb(0 0 0) -1.60229px 1.19694px 0px, rgb(0 0 0) -1.97998px 0.28224px 0px, rgb(0 0 0) -1.87291px -0.701566px 0px, rgb(0 0 0) -1.30729px -1.5136px 0px, rgb(0 0 0) -0.421592px -1.95506px 0px, rgb(0 0 0) 0.567324px -1.91785px 0px, rgb(0 0 0) 1.41734px -1.41108px 0px, rgb(0 0 0) 1.92034px -0.558831px 0px, -2px 2px 3px black;
+}
+/* HomeButton */
+.Homepage, .Setting, .Describe { 
+    width: 81px; 
+    height: 59px; 
+    display: block; 
+    cursor: pointer;
+}
+/* 花坛和霉菌left调整数据80，最左边为250 */
+.Mould, .FlowerBed { 
+    position: absolute; 
+    z-index: 1; 
+    left: 250px; 
+    top: 75px;
+}
+/* 通用影子 */
+.Shadow{ position:absolute; width: 86px; height: 36px; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFYAAAAkCAMAAAAkYj0PAAAAP1BMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACzJYIvAAAAFXRSTlNYAFIECE0MSBJDMh0WNiE+KS06JRpm1DAfAAABwUlEQVRIx7XW25aDIAwFUKbWC4OiVv7/W+ckYQwu76yaJ+zD7jHQEvPzSB2zBdebq0LJSj7NY5mD1TRt24YQHBcWeGwafAXzt1iIAgbn/TQM4zj+xsJyGCbvXSCco5+yaoJ0AKF1n763qJqLVn3/6eADd0RvymbTDA4kiaSVZflKCo/kwwY9y0cs0KqinDBB2jqCZlERr5EbMmWWyHusoAgqOcU0myUyZ0Y3IrxkNSonZRSvTuRRpTAnTgObBRr8xK+v6CWYWhGaCrCy8f3nqEBVPXENYGwfdm/wIQ1s0gZMopaqXg0Md0obYY7UfNeo6hdqhqsbp6zslqp3Xdm3lF2FNbdqFVdYCesQVs7rbdbQceBj5iSusO/Yg057kNOFLnbh/SXWZLDZadPe2tze2rS3D54Ejpvfhdf63D70K3vyP2HTReWq+f+367OlHTi+HQjOuB2K/bts7BS+hO7fZctOIPGVm7dWdPvm1cBzKzQy6DUpQWmn9BLbYXUCCYgs8mqoEVLMOHsQem8GAw3bQv8vayESGXNemMFULuLESDZwTHixsOSR0YGUnMXd+VbHW5eUDLg5863ajBOvRc+n0/gfyOwxiDfAPA4AAAAASUVORK5CYII=); }
+#returnNext, #returnLast,.ArrowMap { display: block; width: 58px; height: 55px; top:310px; position: absolute; cursor: pointer; z-index: 258; background:url(../images/interface/Map_Turn.webp); }
+#returnNext,.ArrowNext{ left:840px; }
+#returnLast,.ArrowLast{ left:1px; transform:scaleX(-1); }
+#DivTeach{ 
+    position:absolute; 
+    width:505px; 
+    height:150px; 
+    top:170px; 
+    left:300px; 
+    z-index:1001; 
+    text-align:center; 
+    font-size:18px; 
+    /*font-weight:700;*/ 
+    word-break: break-all; 
+    word-wrap: break-word;
+}
+#DivTeach::before{
+    content: "（单击上方文字继续）";
+    position: absolute;
+    left: -25.5px;
+    top: 120px;
+    font-size: 22px;
+    font-weight: normal;
+    width: 556px;
+    height: 30px;
+    text-align: center;
+    z-index: -1;
+}
+#dDave{ z-index:1000; top:81px;}
+#ZimuRQ{ position:absolute; width:900px; height:65px; top:477px; z-index:100; display:none; background-color: #000; opacity: 0.5; left: 115px; }
+#Zimu{ text-align: center; font-size: 36px; color: #fff600; line-height: 63px; /*-webkit-text-stroke: 0.6px #000;*/}
+/* CD字幕 */
+.spanCD{ 
+    position:absolute; 
+    left:20px; 
+    top:20px; 
+    font-size:18px; 
+    font-weight:500; 
+    font-family:DFPOP2W9-B5; 
+    color:#FF0; 
+    text-shadow: rgb(0 0 0) 1px 0px 0px, rgb(0 0 0) 0.540302px 0.841471px 0px, rgb(0 0 0) -0.416147px 0.909297px 0px, rgb(0 0 0) -0.989992px 0.14112px 0px, rgb(0 0 0) -0.653644px -0.756802px 0px, rgb(0 0 0) 0.283662px -0.958924px 0px, rgb(0 0 0) 0.96017px -0.279415px 0px, 2px 2px 2px #000;
+    /*-webkit-text-stroke: 0.2px black;*/ 
+}
+/* 分数进度条 */
+#dSroceContent,#dTimeContent{ visibility:hidden; position: absolute; left: 170px; top: -550px;}
+#jifen{ top: 2px; white-space: nowrap; text-align: center; position: absolute; color: #FCFDBB; font-size: 15px; font-weight: 700; text-shadow: 1px 1px 1px #000; z-index: 1; width: 200px; }
+/*坚不可摧按钮样式*/
+#dAll #startFightButton{
+    z-index:256;
+    pointer-events:none;
+    transition:filter 0.3s;
+    opacity:0;
+    cursor:pointer;
+    position:absolute;
+    width:150px;
+    height:46px;
+    top:1px;
+    right:60px;
+    background: url(../images/interface/voidButton.png);
+    background-size: 150px 46px;
+    font-size: 1.5pc;
+    text-align: center;
+    line-height: 44px;
+    color: white;
+    text-shadow: rgb(0 0 0) 2px 0px 0px, rgb(0 0 0) 1.75517px 0.958851px 0px, rgb(0 0 0) 1.0806px 1.68294px 0px, rgb(0 0 0) 0.141474px 1.99499px 0px, rgb(0 0 0) -0.832294px 1.81859px 0px, rgb(0 0 0) -1.60229px 1.19694px 0px, rgb(0 0 0) -1.97998px 0.28224px 0px, rgb(0 0 0) -1.87291px -0.701566px 0px, rgb(0 0 0) -1.30729px -1.5136px 0px, rgb(0 0 0) -0.421592px -1.95506px 0px, rgb(0 0 0) 0.567324px -1.91785px 0px, rgb(0 0 0) 1.41734px -1.41108px 0px, rgb(0 0 0) 1.92034px -0.558831px 0px, -2px 2px 3px black;
+}
+/*  道具选择槽   */
+#dSelectProp { 
+    position:absolute; 
+    left: 1100px;
+    top: 585px;
+    z-index: 257;
+}
+#dSelectProp #dBottomBar {
+    position: absolute;
+    top: 65px;
+}
+#dSelectProp #dWrap {
+    width: 184px;
+    z-index: 2;
+    position: absolute;
+    left: 9px;
+    top: 15px;
+}
+#dSelectProp #dWrap div {
+    position: absolute;
+}
+#dSelectProp #dWrap .dFrontIcon {
+    cursor: pointer; 
+    position: absolute; 
+    left: 3px; 
+    height: 77px; 
+    width: 77px; 
+    top: -3px;
+}
+#dSelectProp #dList {
+    background: url(../images/Props/Shop/list.png) no-repeat;
+    height: 58px; 
+    width: 180px; 
+    top: -50px;
+    position: absolute;
+    visibility: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2px;
+}
+#dSelectProp #dList img {
+    position: unset;
+}
+#dSelectProp .ListIcon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: block;
+}
+/*  道具使用槽   */
+#dPropsContent {
+    position: absolute;
+    left: 615px;
+    top: 622px;
+    z-index: 257;
+    display: none;
+}
+#dPropsContent #dBottomBar {
+    position: absolute;
+    top:-21px;
+    left: 60px;
+    cursor: pointer;
+}
+#dPropsContent #dUP {
+    pointer-events: none;
+    z-index: 2;
+    position: absolute;
+    top: -18px;
+    line-height: 18px;
+    font-size: 18px;
+    height: 18px;
+    color: white;
+    opacity: 1;
+}
+#dPropsContent #dWrap {
+    position: absolute; 
+    top: 0px; 
+    left: 68px; 
+    z-index: 2;
+}
+#dPropsContent .IconWrap {
+    width:92px;
+    height:79px;
+    position: absolute;
+}
+#dPropsContent #dWrap .dCoolIcon {
+    z-index: 3; 
+    opacity: 0; 
+    position: absolute; 
+    left: 4px; 
+    height: 77px; 
+    width: 77px; 
+    top: -3px;
+    display: none;
+}
+#dPropsContent #dWrap .dFrontIcon {
+    cursor: pointer; 
+    position: absolute; 
+    left: 3px; 
+    height: 77px; 
+    width: 77px; 
+    top: -3px;
+}
+#dPropsContent .dNumText, #dSelectProp .dNumText {
+    pointer-events: none; 
+    position: absolute; 
+    left: 12.5px; 
+    height: 17px; 
+    width: 60px; 
+    top: 53px; 
+    font-size: 16px; 
+    line-height: 16px; 
+    text-align: center; 
+    background: rgba(0, 0, 0, 0.5); 
+    border-radius: 5px 5px 0px 0px; 
+    color: white;
+}
+/*金币*/
+#dCoinContent{
+    position:absolute;
+    left: 650px;
+    top: 4px;
+    z-index: 254;
+    opacity: 0;
+}
+#dnumberMoneyOfUser{
+    position: absolute;
+    left: 10px;
+    top: 3px;
+    height: 24px;
+    width: auto;
+    background: rgba(0,0,0,0.7);
+    border-radius: 12px;
+    line-height: 26px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding-right: 13px;
+    padding-left: 30px;
+}
+/* 过关奖励 */
+.WinItem, .coins_collect {
+    position: absolute;
+    cursor: pointer;
+    z-index: 258;
+}
+.ThrowADom_Wrap {
+    clip:unset;
+    position:absolute;
+    pointer-events:none;
+    transform:scale(0);
+    transform-origin:left top;
+    z-index: 258;
+}
+/* 商店 */
+#dShop {
+    background: url(../images/Props/Shop/store.webp);
+    display: none;
+}
+#dFlexWrap_ShopItem {
+    position: absolute;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+    left: 15.5px;
+    top: 100px;
+    height: 460px;
+    width: 869px;
+    padding-top: 8px;
+    padding-left: 5px;
+}
+#dFlexWrap_ShopItem .item {
+    background: url(../images/Props/Shop/item_bg.webp) no-repeat;
+    width: 270px;
+    height: 460px;
+    position: relative;
+    margin-right: 14px;
+}
+#dFlexWrap_ShopItem .item .prop_name {
+    text-shadow: black 0px 0px 5px;
+    position: absolute;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    line-height: 20px;
+    top: 11px;
+    left: 25px;
+    width: 220px;
+    height: 50px;
+}
+#dFlexWrap_ShopItem .item .prop_description {
+    position: absolute; 
+    text-align: center; 
+    color: rgb(40, 40, 40); 
+    font-size: 18px; 
+    top: 260px; 
+    left: 25px; 
+    width: 220px; 
+    height: 150px;
+}
+#dFlexWrap_ShopItem .item .prop_price{
+    top: 340px; 
+} 
+#dFlexWrap_ShopItem .item .button_buy {
+    position: absolute; 
+    top: 385px;
+}
+#dFlexWrap_ShopItem .item .prop_image {
+    position: absolute; 
+    width: 246px;
+    height: 183px;
+    left: 10px;
+    top: 61px;
+}
+#dFlexWrap_ShopItem .item .prop_image img {
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+}
+#buy1 {
+    left: 75px;
+}
+#buy2 {
+    left: 150px;
+}
+/* 获得新植物卡牌 */
+.NewPlantCard_Wrap {
+    width:100px;
+    height:60px;
+    position:absolute;
+    z-index:258;
+}
+.NewPlantCard_Img {
+    width:100px;
+    height:120px;
+    clip: rect(auto, auto, 60px, auto);
+    position:absolute;
+}
+
+#imgSF{ position:absolute; cursor:pointer; z-index:258; }
+#shade{ display:none; opacity:0; z-index:309; background-color: #000; }
+#shadeb{ display:none; z-index:260; opacity:0.5; background-color: #000; }
+.BigLevel{ font-size:30px; width:100%; height:35px; margin-top: 8px;}
+.VirtualButton{ position:absolute; cursor:pointer; z-index:258; display: block; width: 66px; height: 90px; opacity: 0; }
+#imgKK{position:absolute;z-index:256;}
+#imgSpare{position:absolute;cursor:pointer;z-index:255;}
+#imgSpareKK, #PointerUD2{position:absolute;z-index:255;}
+#dTitle{ visibility:hidden; position:absolute; background-color:#FFD; width:180px; font-size:12px; text-align:center; line-height:1.5; border:1px solid #000; z-index:100000000000; padding:3px; }
+#loading{background:url(../images/interface/loading.webp) no-repeat;background-position: 0 -600px;display:none;z-index:260;}
+#loadju{position:absolute;width:150px;left:750px;}
+#dAll img{position:absolute;}
+#dAll{ background-color:#000; }
+.PZ { position:absolute; }
+#tGround{ position:absolute; width:1400px; height:600px; visibility:hidden; background-color: #FFF; }
+#dCardList{visibility:hidden;position:absolute;left:498px;top:0;width:100px;overflow:visible;z-index:257;}
+#dCardList div{position:relative;cursor:pointer;height:60px;overflow:hidden;}
+.cardSunNum{
+    text-align: right;
+    width: 100%;
+    height: 20px;
+    bottom: 11px;
+    right: 7px;
+    color:white;
+    /*-webkit-text-stroke: black 1px;*/
+    text-shadow: -0.5px 0.5px 3px black, rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+    position: absolute;
+    font-size: 20px;
+}
+.cardSunNum2{
+    text-align: right;
+    width: 100%;
+    height: 28px;
+    bottom: 14px;
+    right: 9px;
+    text-shadow: -0.5px 0.5px 3px black, rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+    color:white;
+    position: absolute;
+    font-size: 28px;
+    line-height: initial;
+}
+#dZombie{position:absolute;width:335px;height:600px;left:950px;top:0;z-index:1;}
+#dSelectCard, #jngAlert, #LvlInfoUI, #Menu, #kuaisushezhi, #dCue{ background:url(../images/interface/panel.webp) no-repeat;}
+#dSpeedContainer{background:url(../images/interface/Speed_Adjust.png) no-repeat;}
+#dSelectCard {
+    visibility:hidden; 
+    position:absolute; 
+    left: 600px; 
+    top:600px; 
+    width:465px; 
+    height:540px; 
+    background-position:0 -2534px; 
+    z-index: 257; 
+    pointer-events: none;
+}
+#dSelectCard .title{line-height:35px;height:45px;width:100%;top:0;}
+#dSelectCard .bTitle{ width:100%; height:80px; margin-top:40px; margin-left:25%; }
+#dSelectCard #button1{ 
+    width:112px; 
+    height:46px;
+}
+#dSelectCard #btnOK{ width:112px; height: 46px; }
+#dReadySetPlant{position:absolute;overflow:hidden;z-index:50;text-shadow: rgb(0 0 0) 2px 0px 0px, rgb(0 0 0) 1.75517px 0.958851px 0px, rgb(0 0 0) 1.0806px 1.68294px 0px, rgb(0 0 0) 0.141474px 1.99499px 0px, rgb(0 0 0) -0.832294px 1.81859px 0px, rgb(0 0 0) -1.60229px 1.19694px 0px, rgb(0 0 0) -1.97998px 0.28224px 0px, rgb(0 0 0) -1.87291px -0.701566px 0px, rgb(0 0 0) -1.30729px -1.5136px 0px, rgb(0 0 0) -0.421592px -1.95506px 0px, rgb(0 0 0) 0.567324px -1.91785px 0px, rgb(0 0 0) 1.41734px -1.41108px 0px, rgb(0 0 0) 1.92034px -0.558831px 0px, -2.5px 2.5px 5px black;}
+#dPCard{position:relative;width:96%;height:455px;padding-left:14px;}
+#dPCard .aCard{cursor:pointer;width:70px;height:42px;overflow:hidden;float:left;position:relative;margin:0 0 0 2px;}
+#dPCard img{left:0;width:70px;height:84px;}
+#dTop {
+    position:absolute;
+    left:0px;
+    top:0px;
+    visibility:hidden;
+    z-index:254;
+}
+#dSunNum {
+    background:url(../images/interface/Topbar.webp) no-repeat;
+    height:64px;
+    width:129px;
+    background-position:-113px 0;
+    position:absolute;
+    left: 121px;
+    top: -1px;
+}
+#sSunNum, #sSunNumG {
+    position: absolute;
+    top: 12px;
+    left: 62px;
+    font-size: 18pt;
+    color: #FFF;
+    width: 60px;
+    text-align: center;
+}
+#sSunNumG {
+    display:none;
+    animation:SunNumG 0.5s steps(1, start) infinite;
+}
+#tdShovel {
+    background:url(../images/interface/Topbar.webp) no-repeat;
+    height:60px;
+    width:59px;
+    background-position:-54px 0;
+    position:absolute;
+    cursor:pointer;
+    left: 274px;
+    top: 1px;
+    visibility:hidden;
+}
+#tdShovel #quickKeyTextShovel {
+    pointer-events:none;
+    position:absolute;
+    left:32.5px;
+    width:30px;
+    top:32px;
+    font-size:22px;
+    text-align:center;
+    color:rgb(255, 252, 244);
+    line-height:35px;
+    text-shadow: rgba(0, 0, 0, 0.5) 1.7px 1.7px 2px, rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;
+}
+#dNewProp, #Diary, #WorldMap, #Writer{ background:url(../images/interface/PublicBg.webp) no-repeat;}
+#dNewPlant{background:url(../images/interface/GetNewPlantPanel.webp) no-repeat;visibility:hidden;z-index:258;}
+#dNewPlant .card{position:absolute;top:100px;width:20%;height:191px;left: 19%;}
+#dNewPlantName{
+    position: absolute;
+    top: 390px;
+    text-align: center;
+    left: 70px;
+    width: 300px;
+    /* font-family: 方正准圆简体,Microsoft YaHei,Helvetica,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif; */
+    -webkit-text-fill-color: white;
+    /* -webkit-text-stroke: 2px black; */
+    text-shadow: rgb(0 0 0) 2px 0px 0px, rgb(0 0 0) 1.75517px 0.958851px 0px, rgb(0 0 0) 1.0806px 1.68294px 0px, rgb(0 0 0) 0.141474px 1.99499px 0px, rgb(0 0 0) -0.832294px 1.81859px 0px, rgb(0 0 0) -1.60229px 1.19694px 0px, rgb(0 0 0) -1.97998px 0.28224px 0px, rgb(0 0 0) -1.87291px -0.701566px 0px, rgb(0 0 0) -1.30729px -1.5136px 0px, rgb(0 0 0) -0.421592px -1.95506px 0px, rgb(0 0 0) 0.567324px -1.91785px 0px, rgb(0 0 0) 1.41734px -1.41108px 0px, rgb(0 0 0) 1.92034px -0.558831px 0px, 2px 2px 1px #000;
+    font-size: 50px;
+}
+#dNewPlant #btnNextLevel{position:absolute;left:532px;top:492px;width:287px;height:91px;cursor:pointer;background-color: rgba(255, 255, 255, 0);border:0;}
+#dNewPlantTooltip{position: absolute;left: 7%;top: 480px;width: 311px;font-size: 15px;color: #232323;line-height: 28px;}
+#dNewPlantSunNum {
+    position: absolute;
+    left: 75.5%;
+    top: 48px;
+    width: 57px;
+    font-size: 30px;
+    color: #232323;
+    text-align: center;
+}
+#dNewPlantcoolTime {
+    position: absolute;
+    left: 75.5%;
+    top: 105px;
+    width: 67px;
+    font-size: 30px;
+    color: #232323;
+    text-align: center;
+}
+#dNewPlantStory{
+    position: absolute;
+    left: 58.2%;
+    top: 258px;
+    width: 306px;
+    font-size: 15px;
+    color: #232323;
+    line-height: 24px;
+    text-indent: 18px;
+    letter-spacing: .01px;
+    height: 194px;
+    overflow-y: auto;
+}
+#dNewProp{visibility:hidden;position:absolute;width:900px;height:600px;background-position:0 -1800px;z-index:258}
+#iNewProp{position: absolute;width: 257px;height: 282px;background-repeat: no-repeat;}
+#dNewPropName{position: absolute;
+    top: 335px;
+    text-align: center;
+    left: 33%;
+    width: 300px;
+    height: 55px;
+    font-size: 30px;
+    color: #24904B;
+    line-height: 55px;
+    text-shadow: rgb(0 0 0) 1px 0px 0px, rgb(0 0 0) 0.540302px 0.841471px 0px, rgb(0 0 0) -0.416147px 0.909297px 0px, rgb(0 0 0) -0.989992px 0.14112px 0px, rgb(0 0 0) -0.653644px -0.756802px 0px, rgb(0 0 0) 0.283662px -0.958924px 0px, rgb(0 0 0) 0.96017px -0.279415px 0px, 1px 1px 1px black;
+}
+#dNewPropTooltip{position: absolute;left: 34%;top: 415px;text-align: center;width: 284px;font-weight: bold;font-size: 18px;color: #24904B;}
+#dNewProp #NextLevel{position:absolute;left: 43%;top: 90%;}
+#jngAlert{z-index:361;position:absolute;display:none;top:153px;width:340px;height:300px;left:50%;background-position:0 -2130px;margin-left: -170px;}
+#jngAlert #text{position:absolute;width:295px;margin-top:90px;margin-left:23px;text-align:center;color:#fff;letter-spacing:2px;}
+#jngAlert #anr{ margin-top: 208px; width: 270px; list-style: none; display: flex; justify-content: center; padding-inline-start: 40px; }
+#jngAlert #anr li{ float: left; margin-right: 5px; }
+#jngAlert #next,#close{ width:112px; height:46px; }
+#rules{background:url(../images/interface/Introduction.webp);position:absolute;left:50%;margin-left:-210px;top:80px;width:427px;height:426px;display:none;z-index:401;}
+#rules #button{margin-left: 35%;margin-top: 80%;}
+#LvlInfoUI{ background-position:0 -1427px; position:absolute; left:50%; margin-left:-280px; width:594px; height:404px; display:none; z-index:310; top: 88px; opacity: 0; }
+#LvlInfoUI #guankaming{
+    width: 292px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: #FFD700;
+    text-shadow: rgb(0 0 0) 1px 0px 0px, rgb(0 0 0) 0.540302px 0.841471px 0px, rgb(0 0 0) -0.416147px 0.909297px 0px, rgb(0 0 0) -0.989992px 0.14112px 0px, rgb(0 0 0) -0.653644px -0.756802px 0px, rgb(0 0 0) 0.283662px -0.958924px 0px, rgb(0 0 0) 0.96017px -0.279415px 0px, 2px 2px 3px black;
+    font-size: 28px;
+    margin-top: 10px;
+    margin-left: 145px;
+    float: left;
+}
+#LvlInfoUI #guanbi{ position: absolute; top: 24px; left: 550px; }
+#LvlInfoUI #textIn{
+    width: 227px;
+    height: 186px;
+    text-shadow:rgb(0 0 0) 2px 0px 0px, rgb(0 0 0) 1.75517px 0.958851px 0px, rgb(0 0 0) 1.0806px 1.68294px 0px, rgb(0 0 0) 0.141474px 1.99499px 0px, rgb(0 0 0) -0.832294px 1.81859px 0px, rgb(0 0 0) -1.60229px 1.19694px 0px, rgb(0 0 0) -1.97998px 0.28224px 0px, rgb(0 0 0) -1.87291px -0.701566px 0px, rgb(0 0 0) -1.30729px -1.5136px 0px, rgb(0 0 0) -0.421592px -1.95506px 0px, rgb(0 0 0) 0.567324px -1.91785px 0px, rgb(0 0 0) 1.41734px -1.41108px 0px, rgb(0 0 0) 1.92034px -0.558831px 0px, 2px 2px 5px black;
+    font-size: 24px;
+    margin-left: 147px;
+    margin-top: -9px;
+    line-height: 16.5px;
+    float: left;
+    color: #FFF;
+}
+#LvlInfoUI #LvlInfo_Prize{position:absolute;}
+#LvlInfoUI #picture{width:153px;height:144px;margin-top: 85px;margin-left: 376px;background:url(../images/interface/PreviewMap.webp);}
+#LvlInfoUI #zombie{ width: 500px; height: 83px; margin-top: 60px; margin-left: 60px; overflow-x: hidden; display: flex; flex-wrap: wrap; }
+#LvlInfoUI #zombie::-webkit-scrollbar{width: 8px;} 
+#LvlInfoUI #zombie::-webkit-scrollbar-track{border-radius: 10px;background-color: rgba(143, 188, 143, 0.7);}  
+#LvlInfoUI #zombie::-webkit-scrollbar-thumb{border-radius: 10px;background: rgba(255, 255, 255, 0.4);}
+#LvlInfoUI #zombie::-webkit-scrollbar-thumb:hover{background: #c8e6c9b8;}
+#LvlInfoUI #zombie::-webkit-scrollbar-thumb:active{background: #388e3c75;}
+#LvlInfoUI #anniu{ height:46px; left: 50%; margin-left: -56px; top: 390px; position: absolute; }
+#LvlInfoUI #go{ width:112px; /*height:45px;*/height:46px; float: left; }
+#LvlInfoUI #jx{ 
+    width:112px; 
+    height:46px;
+    color: #8ce9c5;
+    text-shadow: rgb(60, 116, 91) 2px 0px 0px, rgb(60, 116, 91) 1.75517px 0.958851px 0px, rgb(60, 116, 91) 1.0806px 1.68294px 0px, rgb(60, 116, 91) 0.141474px 1.99499px 0px, rgb(60, 116, 91) -0.832294px 1.81859px 0px, rgb(60, 116, 91) -1.60229px 1.19694px 0px, rgb(60, 116, 91) -1.97998px 0.28224px 0px, rgb(60, 116, 91) -1.87291px -0.701566px 0px, rgb(60, 116, 91) -1.30729px -1.5136px 0px, rgb(60, 116, 91) -0.421592px -1.95506px 0px, rgb(60, 116, 91) 0.567324px -1.91785px 0px, rgb(60, 116, 91) 1.41734px -1.41108px 0px, rgb(60, 116, 91) 1.92034px -0.558831px 0px, -2px 2px 3px rgb(60, 116, 91);    
+    float: left;
+    display: none;
+}
+#Menu{ 
+    z-index: 360; 
+    position: fixed; 
+    text-align: center; 
+    display: none; 
+    top: 60px; 
+    width: 412px; 
+    height: 483px; 
+    background-position: 0 0; 
+    /*font-weight: 700;*/ 
+    margin: auto; 
+    left: 0; 
+    right: 0; }
+#Menu .button{
+    cursor:pointer;
+    color:#FFF;
+    text-decoration:none;
+    color:white;
+    /*font-family:方正准圆简体,Microsoft YaHei,Helvetica,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;*/
+    /*-webkit-text-stroke: 1.4px black;*/
+    text-shadow: 1.7px 1.7px 1px #000, rgb(0, 0, 0) 2px 0px 0px, rgb(0, 0, 0) 1.75517px 0.958851px 0px, rgb(0, 0, 0) 1.0806px 1.68294px 0px, rgb(0, 0, 0) 0.141474px 1.99499px 0px, rgb(0, 0, 0) -0.832294px 1.81859px 0px, rgb(0, 0, 0) -1.60229px 1.19694px 0px, rgb(0, 0, 0) -1.97998px 0.28224px 0px, rgb(0, 0, 0) -1.87291px -0.701566px 0px, rgb(0, 0, 0) -1.30729px -1.5136px 0px, rgb(0, 0, 0) -0.421592px -1.95506px 0px, rgb(0, 0, 0) 0.567324px -1.91785px 0px, rgb(0, 0, 0) 1.41734px -1.41108px 0px, rgb(0, 0, 0) 1.92034px -0.558831px 0px;;
+}
+#Menu #button2{ position: absolute; left: 366px; top: 65px;}
+#Menu .OMd0{margin-top:120px;height:65px;position:relative;}
+#Menu .OMd0 .OMd1{
+    color:white;
+    position:absolute;
+    left:150px;
+    text-align:left;
+    font-size:18px;
+    /*font-family:方正准圆简体,Microsoft YaHei,Helvetica,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke: 0.9px black;*/
+    text-shadow: 1px 1px 0.5px #000, rgb(0, 0, 0) 1px 0px 0px, rgb(0, 0, 0) 0.540302px 0.841471px 0px, rgb(0, 0, 0) -0.416147px 0.909297px 0px, rgb(0, 0, 0) -0.989992px 0.14112px 0px, rgb(0, 0, 0) -0.653644px -0.756802px 0px, rgb(0, 0, 0) 0.283662px -0.958924px 0px, rgb(0, 0, 0) 0.96017px -0.279415px 0px;;
+}
+#Menu .OMd0 .OMd1 div{height:30px;}
+#Menu .OptionsMenuButton{ width:252px; height:94px; margin-top:45px; margin-left:18px; background: url(); cursor:pointer; border:0; }
+#cSilence:checked, #cAutoSun:checked, #cSilence2:checked, #cAutoSun2:checked, #cCursor:checked,#cCoolType:checked,.OMd1 .chk:checked{background-position: 0 -23px; }
+#dSpeedContainer{position:absolute;left:52%;margin-left:-350px;top:87px;width:640px;height:323px;background-position: 164px;background-size:contain;display:none;z-index:360;padding:10px;}
+#dSpeedContainer #button3{ position:absolute; left:460px; top:17px;}
+#dSpeedContainer .nowspeed{height:50px;line-height:50px;}
+.dS2{ position: absolute; width: 180px; height: 55px; left: 262px; top: 45px;}
+/*.dS2 .an{ width: 36px; height: 43px; float: left; cursor: pointer;}*/
+#dSpeedContainer .jngButton{z-index:259;}
+#dSpeedContainer #button2{width:112px;height:45px;}
+#dSpeedContainer .DisplaySpeed{ position: absolute; height:50px; margin-left:205px; top: 260px;}
+#dDisplaySpeed{ position: absolute; top: 165px;height:50px; width:50px; background-position: -150px 0; margin-left: 310px;}
+#kuaisushezhi{ z-index:310; position: relative; text-align:center; display:none; top: 140px; width:328px; height:297px; background-position:0 -1832px; font-weight:700; margin: auto; }
+#kuaisushezhi .OMd1{
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 90px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 20px;
+    /* font-family: 方正准圆简体,Microsoft YaHei,Helvetica,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif; */
+    /* -webkit-text-fill-color: white; */
+    font-weight: normal;
+    /* -webkit-text-stroke: 0.9px black; */
+    text-shadow: rgb(0 0 0) 1px 0px 0px, rgb(0 0 0) 0.540302px 0.841471px 0px, rgb(0 0 0) -0.416147px 0.909297px 0px, rgb(0 0 0) -0.989992px 0.14112px 0px, rgb(0 0 0) -0.653644px -0.756802px 0px, rgb(0 0 0) 0.283662px -0.958924px 0px, rgb(0 0 0) 0.96017px -0.279415px 0px, 1px 1px 2px #000;
+    color: #FFF;
+}
+#kuaisushezhi .ShowSpeed{position: absolute;margin-left: 75px;font-size: 30px;height: 35px;text-align: left;margin-top: 150px;font-family: 方正准圆简体,Microsoft YaHei,Helvetica,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;-webkit-text-fill-color: white;-webkit-text-stroke: 1.4px black;cursor: pointer;text-shadow: 1px 1px 1px #000;color: #FFF;}
+#kuaisushezhi .OptionsMenuButton{position: absolute;top:18px;margin-left:133px;left: 50%;}
+#dCue{position:absolute;width:210px;height:102px;display:none;z-index:259;cursor:default;background-position:0 -2431px;}
+#dCue .button{position:fixed;width:84px;height:32px;z-index:259;background:url(../images/interface/调速_继续游戏_小.png);display:none;margin-left:60px;margin-top:64px;cursor:pointer;}
+#dCueName{position:relative;z-index:259;margin: auto;color:#FFF;font-size:21px;text-align:center;top:2px;line-height: 25px;}
+#dCueTooltip{position:absolute;width:186px;z-index:259;margin-left:10px;margin-top:12px;color:#FFF;font-size:12px;text-align:center;text-shadow:0 0 5px black;}
+#dMenu{visibility:hidden;position:absolute;top:0;left:50%;margin-left:320px;cursor:pointer;width:112px;height:0;z-index:256;}
+.Menu{float:left;text-align:center;line-height:0;height:41px;width:113px;}
+#dMenu #dMenu0{
+    width:112px;
+    height:46px;}
+#dMenu #dMenu1{
+    width:112px;
+    height:46px;
+}
+#Diary{visibility:hidden;position:absolute;z-index:250;width:900px;background-position: 0 -600px;}
+#DiaryIframe{width:900px;height:600px;margin-top:0px;}
+#WorldMap{visibility:hidden;position:absolute;z-index:259;}
+#WorldMap #Close, #FuBen .button_Close, #Almanac .button_Close{ position:absolute; left:785px; top:550px; }
+#WorldMap .entrance{ position:absolute; cursor:pointer; z-index:258; }
+#WorldMap #Tutorial{ left:104px; top:31px; width:230px; height:166px; }
+#WorldMap #Forest{ left:167px; top:212px; width:182px; height:151px; }
+#WorldMap #Marsh{ left:358px; top:106px; width:176px; height:141px; }
+#WorldMap #Polar{ left:442px; top:270px; width:170px; height:127px; }
+#WorldMap #Industry{ left:612px; top:174px; width:190px; height:127px; }
+#WorldMap #Modern{ left:566px; top:402px; width:190px; height:127px; }
+#WorldMap #Lab{ left:246px; top:378px; width:169px; height:139px; }
+#FuBen{visibility:hidden;z-index:261;}
+#FuBen .biaoti, #jijie, #jijie2, #jishu, #jishu2, #meng, #wanjia{ background:url(../images/interface/Fuben1.png) no-repeat;}
+#FuBen .biaoti{position:absolute;left:312px;top:8px;height:189px;width:275px;background-position: -1324px 0;}
+#FuBen .FuBenN{position:absolute;width:169px;height:211px;cursor: pointer;z-index:262;top:193px;}
+#FuBen .FuBenT{position:absolute;width:109px;height:162px;top:344px;}
+#jijie{left:41px;background-position: -817px 0;}
+#jijie2{left:55px;background-position: -162px 0;}
+#jishu{left:256px;background-position: -986px 0;filter: grayscale(100%);}
+/*#jishu2{left:275px;background-position: -486px 0;}*/
+#jishu2{left:300px;}
+#meng{filter: grayscale(100%);left:475px;background-position: -1155px 0;}
+#meng2{left:512px;}
+#wanjia{left:692px;background-position: -648px 0;filter: grayscale(100%);}
+#wanjia2{left:737px;}
+#Writer{visibility:hidden;z-index:255;background-position: 0 -600px;}
+#Writer #wrap{height: 100%;overflow-y: auto;overflow-x: hidden;width: 150%;}
+#SelectionMap{ z-index:258; display: none; }
+#SelectionMap .box{ position: absolute; width: 900px; height: 600px; top: 0px; z-index: -1; }
+#returnHone{ position: absolute;}
+#fuben, #tiaoye{ position: absolute; background: url(../images/interface/map.webp) no-repeat; height: 137px; width: 131px; top: 472px; }
+#fuben{ left: 617px; background-position: -121px 0;}
+#tiaoye{ left: 757px;}
+#labMap, .noneLab{ display: none; }
+/* 2018.7重置的游戏主界面 */
+#dSurface{ background: url(../images/interface/Surface.webp) no-repeat; display:none; z-index:255; height:600px; width:900px; background-position:-187px 0; }
+#dSurface span{ position:absolute; }
+#dSurface .PEntrance{ transform: scale(1.2); }
+#dSurface #eFuBen{ background: url(../images/Plants/IceAloe/IceAloe.webp);width: 110px;height: 126px;top: 400px;left: 18px; }
+#dSurface #eAdventure{ background: url(../images/Plants/WallNut/WallNut.webp); width: 65px; height: 73px; top: 315px; left: 150px; }
+#dSurface #eWriter{ background: url(../images/Plants/SunFlower/idle.webp); width: 73px; height: 74px; top: 285px; left: 315px;}
+#dSurface #eSetting{ background: url(../images/Plants/SunShroom/SunShroom.webp); width: 77px; height: 94px; top: 280px; left: 500px; }
+#dSurface #eNotice{ background: url(../images/Plants/Repeater/Repeater.webp); width: 77px; height: 77px; top: 350px; left: 640px; transform: scaleX(-1) scale(1.2); }
+#dSurface #eLab{ background: url(../images/interface/Surface.webp) no-repeat;height:34px;width:73px;left: 747px;top: 473px; }
+#dSurface #eAlmanac{ background: url(../images/interface/Surface.webp) no-repeat;height:100px;width:114px;background-position:-73px 0;left: 409px;top: 476px; }
+#dSurface #eShop{ 
+    height: 100px;
+    width: 100px;
+    left: 30px;
+    top: 0px;
+}
+/* 图鉴界面 */
+#Almanac{ z-index: 261; visibility: hidden; }
+#Almanac .Book{ border: none; width: 211px; height: 301px; position: absolute; top:150px; box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08); border-radius: 2px; transition: box-shadow,filter .2s; background: url(../images/interface/Almanac.webp); cursor: pointer;}
+#Almanac .Book:hover{ box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12); filter:brightness(110%);  }
+#Almanac .Book:active{ box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12); filter:brightness(90%); }
+#Almanac #aTitle{ background: url(../images/interface/Almanac.webp); width: 258px; height: 111px; position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; top: 8px;}
+#Almanac #aBaike{ left:153px; background-position:-259px 0; }
+#Almanac #aDiary{ left:551px; background-position:-470px 0; }
+/* 游戏失败画面 */
+#GameOver{ width:498px;height:439px;left:316px;top:8px;z-index:309; background: url(../images/interface/GameOver.png); position: absolute; transform:scale(0); }
+/* 活动与公告 date：2019.2.4 */
+#Notice{ display: none; width: 900px; height: 600px; background: url(../images/interface/Notice.webp) 0 0; top: 0px; position: absolute; z-index: 360; left: 0; right: 0; margin: 0 auto; }
+#Notice .Close{ left: 840px; top: 90px; position: absolute; }
+#Notice #activities{ width: 716px; height: 428px; position: absolute; left: 156px; top: 119px; overflow-y: auto; overflow-x: hidden; }
+#Notice #activities::-webkit-scrollbar{width: 8px;} 
+#Notice #activities::-webkit-scrollbar-track{border-radius: 10px;background-color: rgba(239, 180, 14, 0.49);}  
+#Notice #activities::-webkit-scrollbar-thumb{border-radius: 10px;background: rgb(185, 54, 36);}  
+#Notice .ActLi{ border-style: solid; border-width: 2px; border-color: rgb(0, 0, 0); border-radius: 10px; background-color: rgb(233, 235, 186); box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.3); width: 701px; height: 92px; margin: 3px; float: left; position: relative; }
+#Notice .ActName{ 
+    /*font-weight: 900; */
+    font-size: 36px;
+    color: rgb(245, 255, 0);
+    /*text-shadow: 2.516px 1.634px 6px rgb(0 0 0 / 28%);*/
+    position: absolute;
+    /* -webkit-text-stroke: 1.5px black; */
+    left: 15px;
+    text-shadow: rgb(0 0 0) 1px 0px 0px, rgb(0 0 0) 0.540302px 0.841471px 0px, rgb(0 0 0) -0.416147px 0.909297px 0px, rgb(0 0 0) -0.989992px 0.14112px 0px, rgb(0 0 0) -0.653644px -0.756802px 0px, rgb(0 0 0) 0.283662px -0.958924px 0px, rgb(0 0 0) 0.96017px -0.279415px 0px, 1px 1px 1.2px black, 2.516px 1.634px 6px rgb(0 0 0 / 28%);
+    top: 5px;
+}
+#Notice .ActDate{ 
+    /*font-weight: 900;*/ 
+    font-size: 18px; 
+    color: rgb(245, 255, 0); 
+    position: absolute; 
+    /*-webkit-text-stroke: 1.1px black;*/
+    text-shadow: rgb(0 0 0) 1px 0px 0px, rgb(0 0 0) 0.540302px 0.841471px 0px, rgb(0 0 0) -0.416147px 0.909297px 0px, rgb(0 0 0) -0.989992px 0.14112px 0px, rgb(0 0 0) -0.653644px -0.756802px 0px, rgb(0 0 0) 0.283662px -0.958924px 0px, rgb(0 0 0) 0.96017px -0.279415px 0px, 1px 1px 0 black;    
+    left: 15px; 
+    top: 58px; 
+}
+#Notice .ActNumber{ 
+    /*font-weight: 900;*/ 
+    font-size: 18px; 
+    color: rgb(245, 255, 0); 
+    position: absolute; 
+    /*-webkit-text-stroke: 1.1px black;*/
+    text-shadow: rgb(0 0 0) 1px 0px 0px, rgb(0 0 0) 0.540302px 0.841471px 0px, rgb(0 0 0) -0.416147px 0.909297px 0px, rgb(0 0 0) -0.989992px 0.14112px 0px, rgb(0 0 0) -0.653644px -0.756802px 0px, rgb(0 0 0) 0.283662px -0.958924px 0px, rgb(0 0 0) 0.96017px -0.279415px 0px, 1px 1px 0 black;    
+    left: 182px; 
+    top: 58px; }
+#Notice .Enter{ width: 142px; height: 64px; position: absolute; left: 550px; top: 14px; background: url(../images/interface/Notice.webp) -266px -602px; }
+/*大鼠标*/
+.bigCursor{cursor:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABBklEQVRYR92W7QrDIAxFj7AH66PHJ8t+zLDYT+uMhV2QGpXkeG2paBFPqRR/DsIASnc+hAGIyCMQLx+oKiklVFVTSsnPRakCgPkQGwCYC7ELAPMgDgFgDsQpAMRDXAJALEQTAMRBNANADMQtABgPcRsAxkJ0AcA4iG4AGAPRDJBzXg8BICK/Qah+f8de6xg+d4azVtbdkyX3Be1u4MfK0kut0l9qcwQ5Z5Zl8ecLUMVdVh+pUKuIVLciP+7j8hymygG38wSfagcu9L1we7KdlW61O5sLdeEqqZ83Wbxe2yWXdFdWMMqFpnNUrd8FIOaLOFKkC830f+1Cs6yotRHFb1vni46w/g1x8++gSD+jQwAAAABJRU5ErkJggg==),auto;}
+/*NoBar滚动条*/
+.NoBar::-webkit-scrollbar{width: 8px;} 
+.NoBar::-webkit-scrollbar-track{border-radius: 10px;background-color: rgba(0,0,0,0.5);opacity:0.5;}  
+.NoBar::-webkit-scrollbar-thumb{border-radius: 10px;background: rgba(100,100,100,0.5);opacity:0.7;}
+.NoBar::-webkit-scrollbar-thumb:hover{background: white;}
+.NoBar::-webkit-scrollbar-thumb:active{background: gray;}
+.HiddenBar::-webkit-scrollbar{width:0;}
+/*20关使用默认字体*/
+.LvlUI_Industry20Div{
+    font-family:Microsoft YaHei,Arial;
+}
+/*图鉴*/
+.Almanac_Name{
+    pointer-events:none;
+    left:560px;
+    top:30px;
+    line-height:30px;
+    font-size:30px;
+    overflow-y:visible;
+    text-align:center;
+    overflow:hidden;
+    position:absolute;
+    height:30px;
+    width:320px;
+    color:white;
+    text-shadow:1px 1px 3px black;
+}
+.a4pxBar::-webkit-scrollbar {
+    width: 4px;
+}
+/* 新版进度条系统 */
+#dFlagMeter {
+    visibility: hidden;
+    position: absolute;
+    left: 356px;
+    z-index: 254;
+}
+#sFlagMeterTitleF {
+    position: absolute;
+    color: #FCFDBB;
+    font-size: 24px;
+    top: 25px;
+    text-shadow: 0px 2px 4.5px rgb(0 0 0 / 35%), rgb(0 0 0 / 20%) 1px 0px 0px, rgb(0 0 0 / 20%) 0.540302px 0.841471px 0px, rgb(0 0 0 / 35%) -0.416147px 0.909297px 0px, rgb(0 0 0 / 35%) -0.989992px 0.14112px 0px, rgb(0 0 0 / 35%) -0.653644px -0.756802px 0px, rgb(0 0 0 / 35%) 0.283662px -0.958924px 0px, rgb(0 0 0 / 35%) 0.96017px -0.279415px 0px, 1px 1px 0 black;
+    width: 500px;
+}
+#dFlagHead {
+    z-index: 1;
+    position: absolute;
+    background-image: url(../images/interface/Topbar.webp);
+    transition: left,right 0.5s;
+}
+.NormalHead {
+    width: 28px;
+    height: 28px;
+    top:-3.8px;
+    background-position:-26px 0;
+    display: block;
+    right: 0;
+    left: auto;
+}
+.BOSSHead {
+    width: 26px;
+    height: 32px;
+    top:-5px;
+    left: 0;
+    right: 198px;
+    background-position:0 0;
+}
+.NoneHead {
+    display: none;
+}
+#dFlagMeterContent {
+    position: relative;
+    top: 6px;
+    visibility: hidden;
+    width: 220px;
+    height: 22px;
+}
+#dFlagMeterBar {
+    border-radius: 50px;
+    position: absolute;
+    top: 3.5px;
+    width: 0;
+    height: 14.8px;
+}
+#dFlagBG {
+    background: url(../images/interface/Topbar.webp) no-repeat;
+    background-position: -242px 0;
+    position: absolute;
+    width: 220px;
+    height: 22px;
+ }
+.GreenBar {
+    background: linear-gradient(0deg, #64f144, #efffbb);
+}
+.BlueBar {
+    background: linear-gradient(0deg, #43a8f0, #bbf9ff);
+}
+.RedBar {
+    background: linear-gradient(0deg, #e20101, #ff8f8f);
+}
+.LeftBar {
+    left: 3.1px;
+    right: auto;
+}
+.RightBar {
+    left: auto;
+    right: 5.4px;
+}
+#dGameScore {
+    position: absolute;
+    color: #FCFDBB;
+    font-size: 24px;
+    top: 32px;
+    text-shadow: 0px 2px 4.5px rgb(0 0 0 / 35%), rgb(0 0 0 / 20%) 1px 0px 0px, rgb(0 0 0 / 20%) 0.540302px 0.841471px 0px, rgb(0 0 0 / 35%) -0.416147px 0.909297px 0px, rgb(0 0 0 / 35%) -0.989992px 0.14112px 0px, rgb(0 0 0 / 35%) -0.653644px -0.756802px 0px, rgb(0 0 0 / 35%) 0.283662px -0.958924px 0px, rgb(0 0 0 / 35%) 0.96017px -0.279415px 0px, 1px 1px 0 black;
+    width: 500px;
+    display: none;
+}

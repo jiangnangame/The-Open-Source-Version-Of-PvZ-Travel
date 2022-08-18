@@ -1,0 +1,69 @@
+/*! 
+ * Copyright 2022 JiangNanGame. All rights reserved.
+ * Use of this source code is governed by The-Changjiang-River-License. 
+ * The link of our license: https://github.com/jiangnangame/The-Changjiang-River-License/
+ */
+ /* Basic sample */
+
+body{
+	overflow:hidden;
+	margin:0;
+	padding:0;
+}
+
+.flipbook-viewport{
+	overflow:hidden;
+	width:100%;
+	height:100%;
+}
+
+.flipbook-viewport .container{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin:auto;
+}
+
+.flipbook-viewport .flipbook{
+	width:922px;
+	height:543px;
+	left:-434px;
+	top:-245.5px;
+}
+
+.flipbook-viewport .page{
+	width:434px;
+	height:543px;
+	background-color:white;
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
+
+.flipbook .hard{
+	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-ms-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-o-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	box-shadow:0 0 20px rgba(0,0,0,0.2);
+    transition: box-shadow 0.5s;
+}
+
+.flipbook-viewport .page img{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin:0;
+}
+
+.flipbook-viewport .shadow{
+	transition: box-shadow 0.5s;
+	box-shadow:0 0 20px rgba(0,0,0,0.2);
+}
+.flipbook-viewport .double{
+	width:868px;
+	height:543px;
+	background-size:100% 100%;
+}

@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width = 1050, user-scalable = no" />
+<meta charset="utf-8"/>
+<script type="text/javascript" src="js/jquery.min.1.7.js"></script>
+<script src="js/turn.min.js"></script>
+<script src="js/scissor.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/basic.css"/>
+<style>
+*{
+    user-select:none;
+}
+.NoBar::-webkit-scrollbar{width: 8px;height:8px;} 
+.NoBar::-webkit-scrollbar-track{border-radius: 10px;background-color: rgba(0,0,0,0.5);opacity:0.5;}  
+.NoBar::-webkit-scrollbar-thumb{border-radius: 10px;background: rgba(100,100,100,0.5);opacity:0.7;}
+.NoBar::-webkit-scrollbar-thumb:hover{background: white;}
+.NoBar::-webkit-scrollbar-thumb:active{background: gray;}
+@keyframes shining
+{
+0% {opacity:0.3;}
+50%{opacity:0.5;}
+100% {opacity:0.3;}
+}
+
+</style>
+</head>
+<body>
+<script>document.body.oncopy=document.body.oncontextmenu=document.oncontextmenu=()=>false</script>
+<div id="BigPicContainer" class="NoBar" style="display:none;overflow-x:auto;position:absolute;width:100%;height:100%;top:0px;left:0;">
+    <img id="BigPicShower" style="margin:50px;position:relative;background-size:contain;background-repeat:no-repeat;box-shadow:0 0 20px rgba(0,0,0,0.3)"/>
+</div>
+<div class="flipbook-viewport">
+	<div class="container">
+		<div class="flipbook">
+		</div>
+	</div>
+</div>
+<!--<a id="tip" style="color:white;text-shadow:0 0 5px black;position:absolute;bottom:15px;transform:translateX(395px);animation:shining 5s infinite;">双击以放大浏览</a>
+-->
+<script type="text/javascript">
+let height = 543,width=868;
+let folder = location.search?location.search.split("?folder=").join(""):"./pages/";
+console.log(folder);
+function loadApp() {
+    let imgSRC = (function() {
+        let arr = [];
+        for(let i = 1; i <= 21; i++) {
+            arr.push(folder+"Diary"+i+".webp");
+        }
+        return arr;
+    })();
+    function addPage(src,classN=""){
+        let dom = document.createElement("div");
+        dom.className="page "+classN;
+        dom.style.backgroundImage = `url(${src})`;
+        $(".flipbook")[0].appendChild(dom);
+    }
+    addPage("pages/front.webp","hard");
+    addPage("pages/back.webp","hard");
+    addPage("pages/first.webp");
+    for(let i = 0;i<21;i++){
+        let dom = document.createElement("div");
+        dom.className="double";
+        dom.style.backgroundImage = `url(${imgSRC[i]})`;
+        $(".flipbook")[0].appendChild(dom);
+    }
+    //addPage("pages/Diary12.webp");
+    addPage("pages/left.webp");
+    addPage("pages/back.webp","hard");
+    addPage("pages/back.webp","hard");
+    $(".flipbook .double").scissor();
+    let haveShowed = false;
+    function showBigPic(src,src2,pos){
+        $("#tip").hide();
+        let real = src||src2;
+        let dom = $("#BigPicShower")[0];
+        $('.flipbook').hide();
+        dom.src = real.split("(")[1].split(")")[0].replace(/"/g,"");
+        $('#BigPicContainer').show();
+        dom.onload=function(){
+            if(src2){
+                dom.style.height="150%";
+                dom.style.width="";
+            }else{
+                dom.style.width="90%";
+                dom.style.height="";
+            }
+            let container = $('#BigPicContainer')[0];
+            console.log(container,container.scrollLeft,container.scrollTop,dom.offsetHeight,dom.offsetWidth);
+            container.scrollLeft = (pos[0]+0.5)*dom.offsetWidth/2;
+            container.scrollTop = (pos[1]+0.5)*dom.offsetHeight/2;
+        }
+        haveShowed=true;
+        dom.onclick=function(){
+            $("#tip").show();
+            $('#BigPicContainer').hide();
+            $('.flipbook').show();
+        };
+    }
+	// Create the flipbook
+	$('.flipbook').turn({
+			// Width
+
+			width,
+			// Height
+
+			height,
+            //display:"double",
+			// Elevation
+
+			elevation: 30,
+			// Enable gradients
+
+			gradients: true,
+			
+			// Auto center this flipbook
+
+			autoCenter: false,
+            when:{
+                turning:function(){
+                    let p = document.getElementsByClassName("page-wrapper");
+                    for(let i = 0;i<p.length;i++){
+                        p[i].onclick=null;
+                    }
+                },
+                turned: function(event, page, view) {
+                    let p = document.getElementsByClassName("page-wrapper");
+                    var book = $(this);
+                    function dis(){
+                        let p = document.getElementsByClassName("page-wrapper");
+                        for(let i = 0;i<p.length;i++){
+                            p[i].onclick=null;
+                        }
+                    }
+                    $('.flipbook').turn('peel', false);
+                    for(let i = 0;i<p.length;i++){
+                        let sty = p[i].style.cssText;
+                        let clickCount = 0;
+                        p[i].onclick=function(e){
+                            let relativeDom = document.getElementsByClassName("container")[0];
+                            let pos = [e.clientX-relativeDom.offsetLeft,e.clientY-relativeDom.offsetTop];//以图书中心为原点的鼠标坐标
+                            console.log(Math.abs(pos[0]),width/3*2);
+                            if(Math.abs(pos[0])>=(width/2)/3*2){
+                                if(p[i].style.cssText==sty){
+                                    if(p[i].getAttribute("page")%2==0){
+                                        book.turn("previous");
+                                    }else{
+                                        book.turn("next");
+                                    }
+                                    dis();
+                                }
+                                return;
+                            }
+                            let percentage = [pos[0]/(width/2),pos[1]/(height/2)];
+                            let dom = p[i].getElementsByClassName("page")[0];
+                            showBigPic(dom?.style.backgroundImage,dom?.childNodes[0]?.style.backgroundImage,percentage);
+                        }
+                    }
+                    
+				},
+            }
+
+	});
+}
+
+loadApp();
+
+</script>
+
+</body>
+</html>
