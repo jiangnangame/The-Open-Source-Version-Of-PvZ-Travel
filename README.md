@@ -26,7 +26,7 @@ What's more, for the same reason, when we update *PvZ Travel*, we will not publi
 
 Use of *The Open Source Version Of PvZ Travel* is governed by [The-Changjiang-River-License](https://github.com/jiangnangame/The-Changjiang-River-License). Before you start officially, please read our license extremely carefully.
 
-The pictures, audio and other materials in *The Open Source Version Of PvZ Travel*,  are made by members of JiangNanGame or collected from the Internet. You must not use it for commercial purposes, otherwise all the legal issues should be resolved by yourself.
+The pictures, audio and other materials in *The Open Source Version Of PvZ Travel*,  are made by members of JiangNanGame or collected from the Internet. You must not use them for commercial purposes, otherwise all the legal issues should be resolved by yourself.
 
 When you is using our work, please don't forget to support [Genuine PVZ](https://www.ea.com/games/plants-vs-zombies) by PopCap Games at the same time.
 
