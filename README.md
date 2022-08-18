@@ -1,6 +1,6 @@
 # [Plants vs Zombies Travel](https://pvz.jiangnangame.com/) — A Fan-Made PvZ Game!
 
-<p align="center"><img alt="PVZTR" width="70%" src="https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/60e8c16572e8428ba79fbd13ffccae1a~tplv-k3u1fbpfcp-watermark.image?"/></p>
+<p align="center"><img alt="PVZTR" width="70%" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0cb6bfd7a7b54754ba6f566a51cddc4d~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp"/></p>
 
 <p align="center"><img alt="JiangNanGame" width="60%" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9b1bb76e3c78442aa6f20214063004d7~tplv-k3u1fbpfcp-watermark.image?"/></p>
 
