@@ -1,8 +1,8 @@
 # [植物大战僵尸：旅行](https://pvz.jiangnangame.com/) — PvZ同人作品!
 
-<p align="center"><img alt="PVZTR" width="70%" src="https://raw.githubusercontent.com/jiangnangame/The-Open-Source-Version-Of-PvZ-Travel/main/logo1.png"/></p>
+<p align="center"><img alt="PVZTR" width="80%" src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0cb6bfd7a7b54754ba6f566a51cddc4d~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp"/></p>
 
-<p align="center"><img alt="JiangNanGame" width="60%" src="https://raw.githubusercontent.com/jiangnangame/The-Open-Source-Version-Of-PvZ-Travel/main/logo2.png"/></p>
+<p align="center"><img alt="JiangNanGame" width="55%" src="https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9b1bb76e3c78442aa6f20214063004d7~tplv-k3u1fbpfcp-watermark.image?"/></p>
 
 ## 《植物大战僵尸：旅行》是什么?
 
