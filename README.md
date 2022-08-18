@@ -1,4 +1,8 @@
-# [Plants vs Zombies Travel](https://pvz.jiangnangame.com/) — The Best Fan-Made PvZ Game!
+# [Plants vs Zombies Travel](https://pvz.jiangnangame.com/) — A Fan-Made PvZ Game!
+
+<p align="center"><img alt="PVZTR" src="https://raw.githubusercontent.com/jiangnangame/The-Open-Source-Version-Of-PvZ-Travel/main/logo1.png"/></p>
+
+<p align="center"><img alt="JiangNanGame" src="https://raw.githubusercontent.com/jiangnangame/The-Open-Source-Version-Of-PvZ-Travel/main/logo2.png"/></p>
 
 ## What's PvZ Travel?
 
