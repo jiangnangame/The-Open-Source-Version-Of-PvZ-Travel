@@ -10,7 +10,7 @@
 
 We have developed this game since early 2016 and it still isn't completely finished now. In order to make more people learn about our masterwork, today we decide to publish some source code of PvZ Travel on GitHub and some other websites. The repository is named *The Open Source Version Of PvZ Travel*.
 
-## The method  to build the source code of PvZ Travel.
+## The method to build the source code of PvZ Travel.
 
 *The Open Source Version Of PvZ Travel* don't need any tool to built its source code. What you only need to do is opening the file `index.html` by the lastest version of Google Chrome and then you can run the game program.
 
