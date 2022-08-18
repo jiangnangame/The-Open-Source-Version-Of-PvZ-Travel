@@ -32,4 +32,4 @@ When you is using our work, please don't forget to support [Genuine PVZ](https:/
 
 ## Any Questions?
 
-If you have any questions, please submit it to the issues page of this repository. We will answer it as fast as we can.
+If you have any questions, please submit it to the [issues page](https://github.com/jiangnangame/The-Open-Source-Version-Of-PvZ-Travel/issues) of this repository. We will answer it as fast as we can.
