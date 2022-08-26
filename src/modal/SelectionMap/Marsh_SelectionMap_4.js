@@ -15,10 +15,10 @@ oSelectionMap.loadPage({
       img: ['images/interface/MarshSelection6.webp']
     });
     $c('left:51px;top:192px;', {
-      onclick: _ => oLvlInfoUI.open('Marsh16', 2, [$__language_Array__["1ea77ba015f193f9b9a9a467d79e354c"], $__language_Array__["573ec709977ed8febc9b04e19c46f745"], $__language_Array__["82eba8436155e003532b7242ce4219af"], $__language_Array__["5a155747bf0bef030e9798f4dd623970"]], ['Imp', 'zombie', 'CaskZombie', 'SadakoZombie', 'BucketheadZombie'], 1)
+      onclick: _ => oLvlInfoUI.open('Marsh16', 2, [$__language_Array__["1ea77ba015f193f9b9a9a467d79e354c"], $__language_Array__["573ec709977ed8febc9b04e19c46f745"], $__language_Array__["82eba8436155e003532b7242ce4219af"], $__language_Array__["5a155747bf0bef030e9798f4dd623970"]], ['Imp', 'Zombie', 'CaskZombie', 'SadakoZombie', 'BucketheadZombie'], 1)
     });
     $c('left:199px;top:250px;', {
-      onclick: _ => oLvlInfoUI.open('Marsh17', 2, [$__language_Array__["e93d218ccf6c70744b48bfe291756e41"], $__language_Array__["50361aa75532556c38374ad979d85408"], $__language_Array__["82eba8436155e003532b7242ce4219af"], $__language_Array__["424df46d62b39673d81fd5af320287b4"]], ['Imp', 'zombie', 'BalloonZombie', 'NewspaperZombie', 'ConeheadZombie', 'CaskZombie', 'BucketheadZombie', 'FootballZombie'], ["images/interface/MarshClue2.webp", "left: 60px;top: -60px;transform: scale(0.15);"], "Marsh17jx")
+      onclick: _ => oLvlInfoUI.open('Marsh17', 2, [$__language_Array__["e93d218ccf6c70744b48bfe291756e41"], $__language_Array__["50361aa75532556c38374ad979d85408"], $__language_Array__["82eba8436155e003532b7242ce4219af"], $__language_Array__["424df46d62b39673d81fd5af320287b4"]], ['Imp', 'Zombie', 'BalloonZombie', 'NewspaperZombie', 'ConeheadZombie', 'CaskZombie', 'BucketheadZombie', 'FootballZombie'], ["images/interface/MarshClue2.webp", "left: 60px;top: -60px;transform: scale(0.15);"], "Marsh17jx")
     });
     $c('left:427px;top:203px;', {
       onclick: _ => oLvlInfoUI.open('Marsh18', 2, [$__language_Array__["357da1aae9d39e0390bdeecca479e339"], $__language_Array__["ec79ae4f79a9db587cf87a51678000dd"], $__language_Array__["82eba8436155e003532b7242ce4219af"], $__language_Array__["3213c6ee0d62313a2c1aaee32d6b0fcb"]], ['Imp', 'ConeheadZombie', 'SadakoZombie', 'BucketheadZombie', 'FootballZombie', 'CigarZombie'], 1, "Marsh18jx")

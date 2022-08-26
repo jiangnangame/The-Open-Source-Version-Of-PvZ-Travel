@@ -22,7 +22,7 @@ oSelectionMap.loadPage({
       onclick: _ => oLvlInfoUI.open('Polar7', 3, [$__language_Array__["5626ee3a6a8f30b2cec073776a723c8b"], $__language_Array__["16cae51b844267bedf76df94a2306717"], $__language_Array__["73a42c46b9e367b47d8852e9e5f56985"], $__language_Array__["16b2f388d58cf602b9b2832bbf2f7c4e"]], ['Zombie', 'MakeRifterZombie', 'SkatingZombie', 'StrollZombie', 'NewspaperZombie', 'MembraneZombie', 'CigarZombie'], ["plant", oIceAloe])
     });
     $c('left:380px;top: 250px;', {
-      onclick: _ => oLvlInfoUI.open('Polar8', 3, [$__language_Array__["e0cc006794cc37e8b6ab0104d9f833f0"], $__language_Array__["9c6e789c4554297e4d92002774bab9ef"], $__language_Array__["9b7d36fcb0ac4e424950542699e66cfc"], $__language_Array__["9a1db96c6d39555cb826c1f40dc9f5ad"]], ['zombie', 'ConeheadZombie', 'BucketheadZombie'], 1)
+      onclick: _ => oLvlInfoUI.open('Polar8', 3, [$__language_Array__["e0cc006794cc37e8b6ab0104d9f833f0"], $__language_Array__["9c6e789c4554297e4d92002774bab9ef"], $__language_Array__["9b7d36fcb0ac4e424950542699e66cfc"], $__language_Array__["9a1db96c6d39555cb826c1f40dc9f5ad"]], ['Zombie', 'ConeheadZombie', 'BucketheadZombie'], 1)
     });
     $c('left:560px;top:280px;', {
       onclick: _ => oLvlInfoUI.open('Polar9', 3, [$__language_Array__["2c1227f417865f0179fd21c7b5144f63"], $__language_Array__["c6ab1fe82c6cec0123a32a7f4c55368d"], $__language_Array__["73a42c46b9e367b47d8852e9e5f56985"], $__language_Array__["9a1db96c6d39555cb826c1f40dc9f5ad"]], ['Imp', 'SadakoZombie', 'SkatingZombie', 'MakeRifterZombie', 'FootballZombie'], 1, "Polar9jx")
